@@ -1,6 +1,6 @@
 Dictionary<int, int> randomInts = new Dictionary<int, int>();
 
-for(var i = 0; i < 100; i++){
+for(var i = 0; i < 1000; i++){
 	Random r = new Random();
 	int rand = r.Next(1,101);
 	if(randomInts.ContainsKey(rand)){
