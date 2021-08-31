@@ -1,0 +1,21 @@
+Dictionary<int, int> randomInts = new Dictionary<int, int>();
+
+for(var i = 0; i < 1000; i++){
+	Random r = new Random();
+	int rand = r.Next(1,101);
+	if(randomInts.ContainsKey(rand)){
+		randomInts[rand]++;
+	} else {
+		randomInts.Add(rand, 1);
+	}	
+}
+
+foreach(int key in randomInts.Keys){
+	if(key %2 == 0){
+		randomInts.Remove(key);
+	}
+}
+
+var finalDict = (from entry in randomInts orderby entry.Value descending select entry).Take(10);
+Console.WriteLine(finalDict);
+
