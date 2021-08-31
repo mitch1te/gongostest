@@ -48,5 +48,45 @@ body{
     background-color: white;
     padding: 10px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.138);
+    height: 450px;
+}
+.card-image{
+    position:relative;
+    margin-top: -30px;
+    background-color: white;
+    color: rgba(167, 84, 54, 0.534);
+    border-color: rgba(167, 84, 54, 0.534);
+    border-style: solid;
+    border-radius: 10%;
+    border-width: 3px;
+    width: 50px;
+    height: 50px;
+    box-shadow: none;
+    outline: none;
+    text-align: center;
+    font-size: 2.5vw;
+    padding-top: 5px;
+    padding-bottom:5px;
+    padding-left: 5px;
+    padding-right: 5px;
     
+}
+.card-title{
+    margin-top: 10px;
+    color: rgb(167, 84, 54);
+}
+.card-text{
+    font-size: 1.25vw;
+    padding: 10px;
+    color: rgba(73, 72, 72, 0.74);
+}
+
+.more-information{
+    color: black;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-decoration-color: rgb(167, 84, 54);
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 0;
 }

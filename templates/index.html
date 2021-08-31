@@ -11,7 +11,7 @@
           
             <p class='small-text'><i>Image from <u><a href='https://google.com'>the internet </a></u></i></p>
        
-            <button class='contact-us-btn'>Contact us</button>
+            <button class='contact-us-btn' onclick="ChangeLayout()">Contact us</button>
         </div>
     </div>
     <div class='container'>
@@ -20,32 +20,98 @@
         </div>
 
 
-        <div class='row'>
+        <div class='row' name='card-holder'>
             <div class='col'>
                 <div class='long-cards'>
-                    <img class='card-image'>
-                    Test1
+                    <div class='card-image'>
+                        <i class='fa fa-calendar'></i>
+                    </div>
+                    <h3 class='card-title'>
+                        Mobile 
+                        Development
+                    </h3>
+                    <div class='card-text'>
+                        Here we have some information on mobile development. I would include the actual text but the image is so small.
+                    </div>
+                    <br>
+                    <p class='more-information'>More</p>
                 </div>
             </div>
             <div class='col'>
                 <div class='long-cards'>
-                    <img class='card-image'>
-                    Test2
+                    <div class='card-image'>
+                        <i class='fa fa-mobile'></i>
+                    </div>
+                    <h3 class='card-title'>
+                        Mobility<br>
+                        Services
+                    </h3>
+                    <div class='card-text'>
+                        If you ever need some services while being mobile, we have this thing called mobility services! It's better than static services because it's mobile.
+                    </div>
+                    <br>
+                    <p class='more-information'>More</p>
                 </div>
             </div>
             <div class='col'>
                 <div class='long-cards'>
-                    <img class='card-image'>
-                    Test3
+                    <div class='card-image'>
+                        <i class='fa fa-cog'></i>
+                    </div>
+                    <h3 class='card-title'>
+                        Software<br>
+                        Consulting
+                    </h3>
+                    <div class='card-text'>
+                        We have a wide variety of things we offer because we do software and, get this, consulting. Combine the two and you get SOFTWARE CONSULTING. It's like two services in once. Plus I want to make this realllllly long to test responsiveness.
+                    </div>
+                    <br>
+                    <p class='more-information'>More</p>
                 </div>
             </div>
             <div class='col'>
                 <div class='long-cards'>
-                    <img class='card-image'>
-                    Test4
+                    <div class='card-image'>
+                        <i class='fa fa-users'></i>
+                    </div>
+                    <h3 class='card-title'>
+                        Professional<br>
+                        Team
+                    </h3>
+                    <div class='card-text'>
+                        Our team is supes prof. You wont find any other team more prof than us. We have like 10m tiktok followers. If that doesn't say prof, I dont know what does. 
+                    </div>
+                    <br>
+                    <p class='more-information'>More</p>
                 </div>
             </div>
         </div>
     </div>
+    <br><br>
 
+    <script>
+        function ChangeLayout(){
+            console.log("Clicked");
+            let allCards = document.getElementsByClassName("long-cards");
+            let tempCards = [];
+            let holder = document.getElementsByName("card-holder")[0];
+            while(holder.firstChild){
+                let node = holder.firstChild.cloneNode(true);
+                    tempCards.push(node);
+                    holder.firstChild.remove();        
+            }
+            for(var i = 0; i < tempCards.length; i++){
+                if(tempCards[i].nodeType != Node.ELEMENT_NODE){
+                    tempCards.splice(i, 1);
+                }
+            }
+            console.log(tempCards);
+            for(var i = 0; i < 4; i ++){
+                let chosen = Math.floor(Math.random() * tempCards.length)
+                console.log(chosen);
+                holder.appendChild(tempCards[chosen]);
+                tempCards.splice(chosen, 1);
+            }
+        }
+    </script>
 {% endblock %}
