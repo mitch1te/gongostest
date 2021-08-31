@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: grey !important;
+    background-color: rgb(224, 221, 221) !important;
 }
 
 .form-container{
@@ -16,4 +16,37 @@ body{
     background-color: white;
     width: 25%;
     max-width: 50%;
+}
+
+.small-text {
+    font-size: smaller;
+}
+
+.contact-us-btn {
+    border-radius: 5%;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    color: white;
+    background-color: rgb(189, 92, 36);
+    padding: 5%;
+}
+.circle-thing{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: rgb(189, 92, 36);
+}
+
+.custom-title{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    color: rgb(189, 92, 36);
+}
+
+.long-cards{
+    background-color: white;
+    padding: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.138);
+    
 }
